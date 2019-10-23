@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainForm</class>
+ <widget class="QWidget" name="MainForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>565</width>
+    <height>379</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>565</width>
+    <height>379</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>565</width>
+    <height>379</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Registration</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"> background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #fa709a, stop:1 #fee140);</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="sizeConstraint">
+    <enum>QLayout::SetFixedSize</enum>
+   </property>
+   <item row="0" column="0">
+    <widget class="QFrame" name="Mainframe">
+     <property name="minimumSize">
+      <size>
+       <width>547</width>
+       <height>361</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #84fab0, stop:1 #8fd3f4);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="lblMiddleName">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>60</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-style: outset;
+font: 25 12pt &quot;Malgun Gothic Semilight&quot;;
+border-width: 2px;
+border-radius: 15px;
+border-color: #333;
+color: rgb(0, 0, 0);
+padding: 1px;</string>
+      </property>
+      <property name="text">
+       <string>Middle Name</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cbGender">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>180</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-style: outset;
+font: 25 12pt &quot;Malgun Gothic Semilight&quot;;
+border-width: 2px;
+border-radius: 15px;
+border-color: #333;
+color: rgb(0, 0, 0);
+padding: 1px;</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Male</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Female</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="lineEditMiddleName">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>60</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: #333;
+padding: 4px;
+</string>
+      </property>
+      <property name="placeholderText">
+       <string>Enter your middle name</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditLastName">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>100</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: #333;
+padding: 4px;
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Enter your last name</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblLastName">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>100</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-style: outset;
+font: 25 12pt &quot;Malgun Gothic Semilight&quot;;
+border-width: 2px;
+border-radius: 15px;
+border-color: #333;
+color: rgb(0, 0, 0);
+padding: 1px;</string>
+      </property>
+      <property name="text">
+       <string>Last Name</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditFirstName">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>20</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color:  qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #c2e9fb, stop:1 #96e6a1);
+padding: 4px;
+</string>
+      </property>
+      <property name="placeholderText">
+       <string>Enter your first name</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblFirstName">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>20</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-style: outset;
+font: 25 12pt &quot;Malgun Gothic Semilight&quot;;
+border-width: 2px;
+border-radius: 15px;
+border-color: #333;
+color: rgb(0, 0, 0);
+padding: 1px;</string>
+      </property>
+      <property name="text">
+       <string>First Name</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditIdNumber">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>140</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: #333;
+padding: 4px;
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Enter your voters id number name</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblIdNumber">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>140</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-style: outset;
+font: 25 12pt &quot;Malgun Gothic Semilight&quot;;
+border-width: 2px;
+border-radius: 15px;
+border-color: #333;
+color: rgb(0, 0, 0);
+padding: 1px;</string>
+      </property>
+      <property name="text">
+       <string>ID Number</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblGender">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>180</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-style: outset;
+font: 25 12pt &quot;Malgun Gothic Semilight&quot;;
+border-width: 2px;
+border-radius: 15px;
+border-color: #333;
+color: rgb(0, 0, 0);
+padding: 1px;</string>
+      </property>
+      <property name="text">
+       <string>Gender</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="leftSideBarFrame">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>-1</y>
+        <width>91</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>341</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4facfe, stop:1 #00f2fe);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QFrame" name="rightSideBarFrame">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>0</y>
+        <width>101</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>101</width>
+        <height>341</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4facfe, stop:1 #00f2fe);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QFrame" name="mainContentFrame">
+      <property name="geometry">
+       <rect>
+        <x>89</x>
+        <y>-1</y>
+        <width>361</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="btnSubmit">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>270</y>
+         <width>171</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"> background-color: green;
+font: 18pt &quot;MS Shell Dlg 2&quot;;
+ border-style: solid;
+ border-width:1px;
+ border-radius:30px;
+ border-color: red;</string>
+       </property>
+       <property name="text">
+        <string>Submit</string>
+       </property>
+      </widget>
+     </widget>
+     <zorder>mainContentFrame</zorder>
+     <zorder>lblMiddleName</zorder>
+     <zorder>cbGender</zorder>
+     <zorder>lineEditMiddleName</zorder>
+     <zorder>lineEditLastName</zorder>
+     <zorder>lblLastName</zorder>
+     <zorder>lineEditFirstName</zorder>
+     <zorder>lblFirstName</zorder>
+     <zorder>lineEditIdNumber</zorder>
+     <zorder>lblIdNumber</zorder>
+     <zorder>lblGender</zorder>
+     <zorder>leftSideBarFrame</zorder>
+     <zorder>rightSideBarFrame</zorder>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
