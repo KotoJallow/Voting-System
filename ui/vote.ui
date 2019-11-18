@@ -232,7 +232,7 @@ border-color: #fff;
        <string>MR U</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnRegister">
+     <widget class="QPushButton" name="btnVote0">
       <property name="geometry">
        <rect>
         <x>70</x>
@@ -257,7 +257,7 @@ border-color:white;</string>
        <string>ABP</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnRegister_2">
+     <widget class="QPushButton" name="btnVote1">
       <property name="geometry">
        <rect>
         <x>260</x>
@@ -285,7 +285,7 @@ border-color:white;</string>
        <string>PRP</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnRegister_3">
+     <widget class="QPushButton" name="btnVote2">
       <property name="geometry">
        <rect>
         <x>450</x>
@@ -310,7 +310,7 @@ border-color:white;</string>
        <string>DOP</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnRegister_4">
+     <widget class="QPushButton" name="btnVote3">
       <property name="geometry">
        <rect>
         <x>70</x>
@@ -335,7 +335,7 @@ border-color:white;</string>
        <string>ZXP</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnRegister_5">
+     <widget class="QPushButton" name="btnVote4">
       <property name="geometry">
        <rect>
         <x>260</x>
@@ -360,7 +360,7 @@ border-color:white;</string>
        <string>AAP</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnRegister_6">
+     <widget class="QPushButton" name="btnVote5">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -385,7 +385,7 @@ border-color:white;</string>
        <string>OOP</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnRegister_7">
+     <widget class="QPushButton" name="btnView0">
       <property name="geometry">
        <rect>
         <x>60</x>
@@ -410,7 +410,7 @@ border-color:white;</string>
        <string>View</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnRegister_8">
+     <widget class="QPushButton" name="btnView1">
       <property name="geometry">
        <rect>
         <x>260</x>
@@ -435,7 +435,7 @@ border-color:white;</string>
        <string>View</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnRegister_9">
+     <widget class="QPushButton" name="btnView2">
       <property name="geometry">
        <rect>
         <x>450</x>
@@ -460,7 +460,7 @@ border-color:white;</string>
        <string>View</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnRegister_10">
+     <widget class="QPushButton" name="btnView3">
       <property name="geometry">
        <rect>
         <x>60</x>
@@ -485,7 +485,7 @@ border-color:white;</string>
        <string>View</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnRegister_11">
+     <widget class="QPushButton" name="btnView4">
       <property name="geometry">
        <rect>
         <x>260</x>
@@ -510,7 +510,7 @@ border-color:white;</string>
        <string>View</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnRegister_12">
+     <widget class="QPushButton" name="btnView5">
       <property name="geometry">
        <rect>
         <x>460</x>

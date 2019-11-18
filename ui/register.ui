@@ -242,7 +242,7 @@ padding: 4px;
        <string/>
       </property>
       <property name="placeholderText">
-       <string>Enter your voters id number name</string>
+       <string>Enter your voters id number</string>
       </property>
      </widget>
      <widget class="QLabel" name="lblIdNumber">

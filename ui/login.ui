@@ -117,7 +117,7 @@ padding: 4px;
 background-color: #fff;</string>
          </property>
          <property name="placeholderText">
-          <string>Enter username</string>
+          <string>Enter your voters id number</string>
          </property>
         </widget>
         <widget class="QLineEdit" name="lineEditPassword">
