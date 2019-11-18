@@ -159,7 +159,7 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
-          <widget class="QLabel" name="lblAvatar0">
+          <widget class="QLabel" name="lblAvatar1">
            <property name="minimumSize">
             <size>
              <width>181</width>
@@ -184,7 +184,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="lblName0">
+          <widget class="QLabel" name="lblName1">
            <property name="minimumSize">
             <size>
              <width>181</width>
@@ -206,7 +206,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="lblPercentage0">
+          <widget class="QLabel" name="lblPercentage1">
            <property name="minimumSize">
             <size>
              <width>171</width>
@@ -255,7 +255,7 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
-          <widget class="QLabel" name="lblAvatar0">
+          <widget class="QLabel" name="lblAvatar2">
            <property name="minimumSize">
             <size>
              <width>181</width>
@@ -280,7 +280,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="lblName0">
+          <widget class="QLabel" name="lblName2">
            <property name="minimumSize">
             <size>
              <width>181</width>
@@ -302,7 +302,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="lblPercentage0">
+          <widget class="QLabel" name="lblPercentage2">
            <property name="minimumSize">
             <size>
              <width>171</width>
@@ -351,7 +351,7 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
-          <widget class="QLabel" name="lblAvatar0">
+          <widget class="QLabel" name="lblAvatar3">
            <property name="minimumSize">
             <size>
              <width>181</width>
@@ -376,7 +376,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="lblName0">
+          <widget class="QLabel" name="lblName3">
            <property name="minimumSize">
             <size>
              <width>181</width>
@@ -398,7 +398,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="lblPercentage0">
+          <widget class="QLabel" name="lblPercentage3">
            <property name="minimumSize">
             <size>
              <width>171</width>
@@ -447,7 +447,7 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
-          <widget class="QLabel" name="lblAvatar0">
+          <widget class="QLabel" name="lblAvatar4">
            <property name="minimumSize">
             <size>
              <width>181</width>
@@ -472,7 +472,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="lblName0">
+          <widget class="QLabel" name="lblName4">
            <property name="minimumSize">
             <size>
              <width>181</width>
@@ -494,7 +494,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="lblPercentage0">
+          <widget class="QLabel" name="lblPercentage4">
            <property name="minimumSize">
             <size>
              <width>171</width>
@@ -543,7 +543,7 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
-          <widget class="QLabel" name="lblAvatar0">
+          <widget class="QLabel" name="lblAvatar5">
            <property name="minimumSize">
             <size>
              <width>181</width>
@@ -568,7 +568,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="lblName0">
+          <widget class="QLabel" name="lblName5">
            <property name="minimumSize">
             <size>
              <width>181</width>
@@ -590,7 +590,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="lblPercentage0">
+          <widget class="QLabel" name="lblPercentage5">
            <property name="minimumSize">
             <size>
              <width>171</width>
