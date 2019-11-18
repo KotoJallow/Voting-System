@@ -26,7 +26,7 @@
    <string>Dashboard</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background:rgb(255, 152, 35)</string>
+   <string notr="true">background-color: #2898cc;</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <property name="sizeConstraint">
@@ -41,7 +41,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));</string>
+      <string notr="true">background-color: #b5e7ff;</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -66,12 +66,12 @@
       </property>
       <property name="styleSheet">
        <string notr="true">font: 14pt &quot;Myanmar Text&quot;;
- background-color: #fff;
-color:  purple;
+background-color:#377896;
+color:  white;
  border-style: solid;
  border-width:2px;
  border-radius:70px;
- border-color: red;
+border-color: #fff;
  max-width:175px;
  max-height:175px;
  min-width:175px;
@@ -98,12 +98,12 @@ color:  purple;
       </property>
       <property name="styleSheet">
        <string notr="true">font: 14pt &quot;Myanmar Text&quot;;
- background-color: white;
-color:  purple;
+background-color:#377896;
+color:  white;
  border-style: solid;
  border-width:2px;
  border-radius:70px;
- border-color: red;
+ border-color: white;
  max-width:175px;
  max-height:175px;
  min-width:175px;
@@ -129,13 +129,13 @@ color:  purple;
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true"> background-color: white;
+       <string notr="true">background-color:#377896;
 font: 14pt &quot;Myanmar Text&quot;;
-color:  purple;
+color:  white;
  border-style: solid;
  border-width:2px;
  border-radius:70px;
- border-color: red;
+ border-color: white;
  max-width:175px;
  max-height:175px;
  min-width:175px;
