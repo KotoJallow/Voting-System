@@ -380,6 +380,57 @@ font: 18pt &quot;MS Shell Dlg 2&quot;;
         <string>Submit</string>
        </property>
       </widget>
+      <widget class="QLineEdit" name="lineEditPassword">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>220</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: #fff;
+background-color:white;
+padding: 4px;
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+       <property name="placeholderText">
+        <string>Enter your voters id number name</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblPassword">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>220</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-style: outset;
+font: 25 12pt &quot;Malgun Gothic Semilight&quot;;
+border-width: 2px;
+border-radius: 15px;
+border-color: #fff;
+color:#fff;
+padding: 1px;
+background-color:#377896;</string>
+       </property>
+       <property name="text">
+        <string>Password</string>
+       </property>
+      </widget>
      </widget>
      <zorder>mainContentFrame</zorder>
      <zorder>lblMiddleName</zorder>
