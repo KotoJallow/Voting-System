@@ -67,7 +67,7 @@
         </property>
         <layout class="QGridLayout" name="gridLayout_2">
          <item row="0" column="0">
-          <widget class="QLabel" name="label">
+          <widget class="QLabel" name="lblAvatar">
            <property name="text">
             <string/>
            </property>
@@ -108,37 +108,11 @@ color:white;
           <enum>Qt::Horizontal</enum>
          </property>
         </widget>
-        <widget class="Line" name="line_2">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>151</y>
-           <width>247</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
         <widget class="Line" name="line_3">
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>201</y>
-           <width>247</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-        <widget class="Line" name="line_4">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>251</y>
+           <y>180</y>
            <width>247</width>
            <height>16</height>
           </rect>
@@ -151,20 +125,7 @@ color:white;
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>301</y>
-           <width>247</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-        <widget class="Line" name="line_6">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>51</y>
+           <y>260</y>
            <width>247</width>
            <height>16</height>
           </rect>
@@ -176,14 +137,159 @@ color:white;
         <widget class="QLabel" name="label_2">
          <property name="geometry">
           <rect>
-           <x>10</x>
-           <y>40</y>
-           <width>47</width>
-           <height>13</height>
+           <x>0</x>
+           <y>60</y>
+           <width>251</width>
+           <height>16</height>
           </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
          </property>
          <property name="text">
           <string>NAME</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblName">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>251</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-weight:bold;</string>
+         </property>
+         <property name="text">
+          <string>koto Jallow</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>130</y>
+           <width>251</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>PARTY</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblParty">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>150</y>
+           <width>251</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-weight:bold;</string>
+         </property>
+         <property name="text">
+          <string>ABP</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_6">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>200</y>
+           <width>251</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>PERCENTAGE</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblPercentage">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>230</y>
+           <width>261</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-weight:bold;</string>
+         </property>
+         <property name="text">
+          <string>70%</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btnClose">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>280</y>
+           <width>75</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:#b5e7ff;
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color:white;
+padding: 4px;
+text-align: center;
+color:black;</string>
+         </property>
+         <property name="text">
+          <string>Close</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btnClose_2">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>75</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:#b5e7ff;
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color:white;
+padding: 4px;
+text-align: center;
+font-weight:bold;
+color:black;</string>
+         </property>
+         <property name="text">
+          <string>Results</string>
          </property>
         </widget>
        </widget>
