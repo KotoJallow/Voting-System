@@ -251,12 +251,12 @@ text-align: center;</string>
       <rect>
        <x>20</x>
        <y>140</y>
-       <width>47</width>
-       <height>13</height>
+       <width>81</width>
+       <height>16</height>
       </rect>
      </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string>PHONE NUMBER</string>
      </property>
     </widget>
    </widget>
@@ -279,7 +279,7 @@ font: 18pt &quot;MS Shell Dlg 2&quot;;
 color:white;</string>
     </property>
     <property name="text">
-     <string>Submit</string>
+     <string>CLOSE</string>
     </property>
    </widget>
   </widget>
