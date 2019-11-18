@@ -26,7 +26,7 @@
    <string>Registration</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"> background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #fa709a, stop:1 #fee140);</string>
+   <string notr="true">background-color: #2898cc;</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <property name="sizeConstraint">
@@ -41,8 +41,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #84fab0, stop:1 #8fd3f4);</string>
+      <string notr="true">background-color: #b5e7ff;;</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -64,9 +63,10 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #84
 font: 25 12pt &quot;Malgun Gothic Semilight&quot;;
 border-width: 2px;
 border-radius: 15px;
-border-color: #333;
-color: rgb(0, 0, 0);
-padding: 1px;</string>
+border-color: #fff;
+color: white;
+padding: 1px;
+background-color:#377896;</string>
       </property>
       <property name="text">
        <string>Middle Name</string>
@@ -86,10 +86,14 @@ padding: 1px;</string>
 font: 25 12pt &quot;Malgun Gothic Semilight&quot;;
 border-width: 2px;
 border-radius: 15px;
-border-color: #333;
-color: rgb(0, 0, 0);
+border-color: #fff;
 padding: 1px;</string>
       </property>
+      <item>
+       <property name="text">
+        <string>Select Gender</string>
+       </property>
+      </item>
       <item>
        <property name="text">
         <string>Male</string>
@@ -114,7 +118,8 @@ padding: 1px;</string>
        <string notr="true">border-style: outset;
 border-width: 2px;
 border-radius: 15px;
-border-color: #333;
+border-color: #fff;
+background-color:white;
 padding: 4px;
 </string>
       </property>
@@ -135,7 +140,8 @@ padding: 4px;
        <string notr="true">border-style: outset;
 border-width: 2px;
 border-radius: 15px;
-border-color: #333;
+border-color: #fff;
+background-color:white;
 padding: 4px;
 </string>
       </property>
@@ -160,9 +166,10 @@ padding: 4px;
 font: 25 12pt &quot;Malgun Gothic Semilight&quot;;
 border-width: 2px;
 border-radius: 15px;
-border-color: #333;
-color: rgb(0, 0, 0);
-padding: 1px;</string>
+border-color: #fff;
+color: #fff;
+padding: 1px;
+background-color:#377896;</string>
       </property>
       <property name="text">
        <string>Last Name</string>
@@ -181,7 +188,8 @@ padding: 1px;</string>
        <string notr="true">border-style: outset;
 border-width: 2px;
 border-radius: 15px;
-border-color:  qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #c2e9fb, stop:1 #96e6a1);
+background-color: #fff;
+border-color: #fff;
 padding: 4px;
 </string>
       </property>
@@ -203,9 +211,10 @@ padding: 4px;
 font: 25 12pt &quot;Malgun Gothic Semilight&quot;;
 border-width: 2px;
 border-radius: 15px;
-border-color: #333;
-color: rgb(0, 0, 0);
-padding: 1px;</string>
+border-color: #fff;
+color:white;
+padding: 1px;
+background-color:#377896;</string>
       </property>
       <property name="text">
        <string>First Name</string>
@@ -224,7 +233,8 @@ padding: 1px;</string>
        <string notr="true">border-style: outset;
 border-width: 2px;
 border-radius: 15px;
-border-color: #333;
+border-color: #fff;
+background-color:white;
 padding: 4px;
 </string>
       </property>
@@ -249,9 +259,10 @@ padding: 4px;
 font: 25 12pt &quot;Malgun Gothic Semilight&quot;;
 border-width: 2px;
 border-radius: 15px;
-border-color: #333;
-color: rgb(0, 0, 0);
-padding: 1px;</string>
+border-color: #fff;
+color:#fff;
+padding: 1px;
+background-color:#377896;</string>
       </property>
       <property name="text">
        <string>ID Number</string>
@@ -271,8 +282,9 @@ padding: 1px;</string>
 font: 25 12pt &quot;Malgun Gothic Semilight&quot;;
 border-width: 2px;
 border-radius: 15px;
-border-color: #333;
-color: rgb(0, 0, 0);
+border-color: #fff;
+color: white;
+background-color:#377896;
 padding: 1px;</string>
       </property>
       <property name="text">
@@ -295,7 +307,7 @@ padding: 1px;</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true"> background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4facfe, stop:1 #00f2fe);</string>
+       <string notr="true"/>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -320,7 +332,7 @@ padding: 1px;</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true"> background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4facfe, stop:1 #00f2fe);</string>
+       <string notr="true"/>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -339,7 +351,7 @@ padding: 1px;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">background-color:#377896;</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -357,12 +369,12 @@ padding: 1px;</string>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true"> background-color: green;
+        <string notr="true">background-color:#b5e7ff;
 font: 18pt &quot;MS Shell Dlg 2&quot;;
  border-style: solid;
  border-width:1px;
  border-radius:30px;
- border-color: red;</string>
+ border-color: white;</string>
        </property>
        <property name="text">
         <string>Submit</string>
