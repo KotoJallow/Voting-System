@@ -1,5 +1,12 @@
 <RCC>
   <qresource prefix="loginBackgroundImage">
+    <file>images/assets_candidates.png</file>
+    <file>images/assets_constituencies.png</file>
+    <file>images/assets_legislative.png</file>
+    <file>images/assets_mayor2.png</file>
+    <file>images/assets_pollingstations.png</file>
+    <file>images/assets_president2.png</file>
+    <file>images/assets_president.png</file>
     <file>images/loginBackgroundImage.png</file>
   </qresource>
 </RCC>
