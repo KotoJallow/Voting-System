@@ -244,12 +244,12 @@ class VoteUI(object):
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
-        self.btnView0.clicked.connect(self.goToContestant)
-        self.btnView1.clicked.connect(self.goToContestant)
-        self.btnView2.clicked.connect(self.goToContestant)
-        self.btnView3.clicked.connect(self.goToContestant)
-        self.btnView4.clicked.connect(self.goToContestant)
-        self.btnView5.clicked.connect(self.goToContestant)
+        self.btnView0.clicked.connect(lambda: self.goToContestant(0))
+        self.btnView1.clicked.connect(lambda: self.goToContestant(1))
+        self.btnView2.clicked.connect(lambda: self.goToContestant(2))
+        self.btnView3.clicked.connect(lambda: self.goToContestant(3))
+        self.btnView4.clicked.connect(lambda: self.goToContestant(4))
+        self.btnView5.clicked.connect(lambda: self.goToContestant(5))
 
         self.btnVote0.clicked.connect(self.goToMain)
         self.btnVote1.clicked.connect(self.goToMain)
@@ -293,8 +293,8 @@ class VoteUI(object):
         self.btnView5.setToolTip(_translate("Form", "Vote Candidate"))
         self.btnView5.setText(_translate("Form", "View"))
 
-    def goToContestant(self):
-        goToContestant(self)
+    def goToContestant(self,index):
+        goToContestant(self,index)
 
     def goToMain(self):
         goToMain(self)

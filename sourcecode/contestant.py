@@ -10,6 +10,10 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from utils import goToVote,goToParty
 
 class ContestantUI(object):
+
+    def __init__(self,index):
+        self.index = index
+
     def setupUi(self, Form):
         self.Form = Form
         Form.setObjectName("Form")
@@ -110,7 +114,7 @@ class ContestantUI(object):
         QtCore.QMetaObject.connectSlotsByName(Form)
 
         self.btnClose.clicked.connect(self.goToVote)
-        self.btnParty.clicked.connect(self.goToParty)
+        self.btnParty.clicked.connect(lambda : self.goToParty(self.index))
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -128,8 +132,8 @@ class ContestantUI(object):
         self.btnParty.setToolTip(_translate("Form", "View Party"))
         self.btnParty.setText(_translate("Form", "PARTY"))
 
-    def goToParty(self):
-        goToParty(self)
+    def goToParty(self,index):
+        goToParty(self,index)
 
     def goToVote(self):
         goToVote(self)

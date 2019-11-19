@@ -34,12 +34,14 @@ def goToAnnouncements(source):
     source.destination = AnnouncementUI()
     navigate(source)
 
-def goToContestant(source):
+def goToContestant(source,index):
     from contestant import ContestantUI
-    source.destination = ContestantUI()
+    source.destination = ContestantUI(index)
     navigate(source)
+    print("Clicked index: %d" % index)
 
-def goToParty(source):
+def goToParty(source,index):
     from party import PartyUI
-    source.destination = PartyUI()
+    source.destination = PartyUI(index)
     navigate(source)
+    print("Clicked index: %d" % index)

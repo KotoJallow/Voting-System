@@ -10,6 +10,10 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from utils import goToContestant
 
 class PartyUI(object):
+
+    def __init__(self,index):
+        self.index = index
+
     def setupUi(self, Form):
         self.Form = Form
         Form.setObjectName("Form")
@@ -120,7 +124,7 @@ class PartyUI(object):
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
-        self.btnClose.clicked.connect(self.goToContestant)
+        self.btnClose.clicked.connect(lambda : self.goToContestant(self.index))
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -140,6 +144,6 @@ class PartyUI(object):
         self.btnClose.setToolTip(_translate("Form", "Go to Contestant"))
         self.btnClose.setText(_translate("Form", "CLOSE"))
 
-    def goToContestant(self):
-        goToContestant(self)
+    def goToContestant(self,index):
+        goToContestant(self,index)
 
