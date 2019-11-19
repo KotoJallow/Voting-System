@@ -299,11 +299,3 @@ class VoteUI(object):
     def goToMain(self):
         goToMain(self)
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = VoteUI()
-    ui.setupUi(Form)
-    Form.show()
-    sys.exit(app.exec_())
