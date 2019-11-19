@@ -7,10 +7,11 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from navigator import navigate
 
 class MainUI(object):
     def setupUi(self, Form):
+        self.Form = Form
         Form.setObjectName("Form")
         Form.resize(545, 418)
         Form.setMinimumSize(QtCore.QSize(545, 418))
@@ -40,6 +41,8 @@ class MainUI(object):
 " min-width:175px;\n"
 " min-height:175px;")
         self.btnResult.setObjectName("btnResult")
+        self.btnResult.clicked.connect(self.goToAnnouncements)
+
         self.btnVote = QtWidgets.QPushButton(self.frame)
         self.btnVote.setGeometry(QtCore.QRect(310, 40, 179, 179))
         self.btnVote.setMinimumSize(QtCore.QSize(179, 179))
@@ -55,6 +58,8 @@ class MainUI(object):
 " min-width:175px;\n"
 " min-height:175px;")
         self.btnVote.setObjectName("btnVote")
+        self.btnVote.clicked.connect(self.goToVote)
+
         self.btnWinner = QtWidgets.QPushButton(self.frame)
         self.btnWinner.setGeometry(QtCore.QRect(170, 220, 179, 179))
         self.btnWinner.setMinimumSize(QtCore.QSize(179, 179))
@@ -70,6 +75,8 @@ class MainUI(object):
 " min-width:175px;\n"
 " min-height:175px;")
         self.btnWinner.setObjectName("btnWinner")
+        self.btnWinner.clicked.connect(self.goToWinner)
+
         self.gridLayout.addWidget(self.frame, 0, 0, 1, 1)
 
         self.retranslateUi(Form)
@@ -82,14 +89,18 @@ class MainUI(object):
         self.btnVote.setText(_translate("Form", "Vote"))
         self.btnWinner.setText(_translate("Form", "Winner"))
 
+    def goToWinner(self):
+        from winner import WinnerUI
+        self.destination = WinnerUI()
+        navigate(self)
 
+    def goToVote(self):
+        from vote import VoteUI
+        self.destination = VoteUI()
+        navigate(self)
 
+    def goToAnnouncements(self):
+        from announcement import AnnouncementUI
+        self.destination = AnnouncementUI()
+        navigate(self)
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = MainUI()
-    ui.setupUi(Form)
-    Form.show()
-    sys.exit(app.exec_())

@@ -7,14 +7,16 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from navigator import navigate
 
 class RegisterUI(object):
     def setupUi(self, MainForm):
+        self.Form = MainForm
         MainForm.setObjectName("MainForm")
         MainForm.resize(565, 379)
         MainForm.setMinimumSize(QtCore.QSize(565, 379))
         MainForm.setMaximumSize(QtCore.QSize(565, 379))
+
         MainForm.setStyleSheet("background-color: #2898cc;")
         self.gridLayout = QtWidgets.QGridLayout(MainForm)
         self.gridLayout.setSizeConstraint(QtWidgets.QLayout.SetFixedSize)
@@ -163,6 +165,8 @@ class RegisterUI(object):
 " border-radius:30px;\n"
 " border-color: white;")
         self.btnSubmit.setObjectName("btnSubmit")
+        self.btnSubmit.clicked.connect(self.goToLogin)
+
         self.lineEditPassword = QtWidgets.QLineEdit(self.mainContentFrame)
         self.lineEditPassword.setGeometry(QtCore.QRect(140, 220, 211, 31))
         self.lineEditPassword.setStyleSheet("border-style: outset;\n"
@@ -223,13 +227,8 @@ class RegisterUI(object):
         self.lineEditPassword.setPlaceholderText(_translate("MainForm", "Enter your voters id number name"))
         self.lblPassword.setText(_translate("MainForm", "Password"))
 
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainForm = QtWidgets.QWidget()
-    ui = RegisterUI()
-    ui.setupUi(MainForm)
-    MainForm.show()
-    sys.exit(app.exec_())
+    def goToLogin(self):
+        from login import LoginUI
+        self.destination = LoginUI()
+        navigate(self)
+        print("Login")

@@ -11,6 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 class AnnouncementUI(object):
     def setupUi(self, Form):
+        self.Form = Form
         Form.setObjectName("Form")
         Form.resize(631, 399)
         Form.setMinimumSize(QtCore.QSize(631, 399))
