@@ -7,7 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from navigator import navigate
+from utils import goToMain, goToRegister
 
 
 class LoginUI(object):
@@ -146,16 +146,10 @@ class LoginUI(object):
         self.btnTitle.setText(_translate("MainForm", "Electronic Voting System"))
 
     def goToMain(self):
-        from main import MainUI
-        self.destination = MainUI()
-        navigate(self)
-        print("Login")
+        goToMain(self)
 
     def goToRegister(self):
-        from register import RegisterUI
-        self.destination = RegisterUI()
-        navigate(self)
-        print("Register")
+        goToRegister(self)
 
 
 if __name__ == "__main__":

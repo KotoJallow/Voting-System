@@ -7,7 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from utils import goToMain
 
 class AnnouncementUI(object):
     def setupUi(self, Form):
@@ -48,14 +48,19 @@ class AnnouncementUI(object):
         self.lblName0.setAlignment(QtCore.Qt.AlignCenter)
         self.lblName0.setObjectName("lblName0")
         self.verticalLayout.addWidget(self.lblName0)
+
         self.lblPercentage0 = QtWidgets.QLabel(self.card0)
         self.lblPercentage0.setMinimumSize(QtCore.QSize(171, 20))
         self.lblPercentage0.setMaximumSize(QtCore.QSize(171, 20))
         self.lblPercentage0.setStyleSheet("")
         self.lblPercentage0.setAlignment(QtCore.Qt.AlignCenter)
         self.lblPercentage0.setObjectName("lblPercentage0")
+
         self.verticalLayout.addWidget(self.lblPercentage0)
         self.gridLayout_2.addWidget(self.card0, 0, 0, 1, 1)
+
+
+
         self.card1 = QtWidgets.QFrame(self.frame)
         self.card1.setMinimumSize(QtCore.QSize(201, 178))
         self.card1.setMaximumSize(QtCore.QSize(201, 178))
@@ -205,11 +210,24 @@ class AnnouncementUI(object):
         self.lblPercentage5.setAlignment(QtCore.Qt.AlignCenter)
         self.lblPercentage5.setObjectName("lblPercentage5")
         self.verticalLayout5.addWidget(self.lblPercentage5)
+
+        self.btnClose = QtWidgets.QPushButton('CLOSE',self.frame)
+        self.btnClose.setGeometry(QtCore.QRect(558, 335, 50, 40))
+        self.btnClose.setStyleSheet("background-color:#377896;\n"
+                                       "font-weight:bold;\n"
+                                       "color: white;\n"
+                                       "border-width: 2px;\n"
+                                       "border-radius: 15px;\n"
+                                       "padding: 4px;\n"
+                                       "text-align: center;")
+        self.btnClose.clicked.connect(self.goToMain)
+
         self.gridLayout_2.addWidget(self.card5, 1, 2, 1, 1)
         self.gridLayout.addWidget(self.frame, 0, 0, 1, 1)
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
+
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -227,15 +245,7 @@ class AnnouncementUI(object):
         self.lblName5.setText(_translate("Form", "KOTO JALLOW"))
         self.lblPercentage5.setText(_translate("Form", "70%"))
 
+    def goToMain(self):
+        goToMain(self)
 
 from resources import resource_rc
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = AnnouncementUI()
-    ui.setupUi(Form)
-    Form.show()
-    sys.exit(app.exec_())

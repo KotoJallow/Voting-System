@@ -7,6 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from utils import goToLogin
 
 
 class WinnerUI(object):
@@ -104,6 +105,8 @@ class WinnerUI(object):
 "text-align: center;\n"
 "color:black;")
         self.btnClose.setObjectName("btnClose")
+        self.btnClose.clicked.connect(self.goToLogin)
+
         self.btnClose_2 = QtWidgets.QPushButton(self.frame_3)
         self.btnClose_2.setGeometry(QtCore.QRect(90, 10, 75, 31))
         self.btnClose_2.setToolTip("")
@@ -135,15 +138,8 @@ class WinnerUI(object):
         self.btnClose.setText(_translate("Form", "Close"))
         self.btnClose_2.setText(_translate("Form", "Results"))
 
+    def goToLogin(self):
+        goToLogin(self)
+
 
 from resources import resource_rc
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = WinnerUI()
-    ui.setupUi(Form)
-    Form.show()
-    sys.exit(app.exec_())

@@ -7,6 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from utils import goToContestant, goToMain
 
 
 class VoteUI(object):
@@ -186,6 +187,8 @@ class VoteUI(object):
 "text-align: center;\n"
 "border-color:white;")
         self.btnView0.setObjectName("btnView0")
+
+
         self.btnView1 = QtWidgets.QPushButton(self.frame)
         self.btnView1.setGeometry(QtCore.QRect(260, 30, 111, 41))
         self.btnView1.setStyleSheet("background-color:#b5e7ff;\n"
@@ -241,6 +244,21 @@ class VoteUI(object):
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
+        self.btnView0.clicked.connect(self.goToContestant)
+        self.btnView1.clicked.connect(self.goToContestant)
+        self.btnView2.clicked.connect(self.goToContestant)
+        self.btnView3.clicked.connect(self.goToContestant)
+        self.btnView4.clicked.connect(self.goToContestant)
+        self.btnView5.clicked.connect(self.goToContestant)
+
+        self.btnVote0.clicked.connect(self.goToMain)
+        self.btnVote1.clicked.connect(self.goToMain)
+        self.btnVote2.clicked.connect(self.goToMain)
+        self.btnVote3.clicked.connect(self.goToMain)
+        self.btnVote4.clicked.connect(self.goToMain)
+        self.btnVote5.clicked.connect(self.goToMain)
+
+
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Vote"))
@@ -274,6 +292,12 @@ class VoteUI(object):
         self.btnView4.setText(_translate("Form", "View"))
         self.btnView5.setToolTip(_translate("Form", "Vote Candidate"))
         self.btnView5.setText(_translate("Form", "View"))
+
+    def goToContestant(self):
+        goToContestant(self)
+
+    def goToMain(self):
+        goToMain(self)
 
 if __name__ == "__main__":
     import sys

@@ -7,7 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from utils import goToVote,goToParty
 
 class ContestantUI(object):
     def setupUi(self, Form):
@@ -109,6 +109,9 @@ class ContestantUI(object):
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
+        self.btnClose.clicked.connect(self.goToVote)
+        self.btnParty.clicked.connect(self.goToParty)
+
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Contestant"))
@@ -125,15 +128,10 @@ class ContestantUI(object):
         self.btnParty.setToolTip(_translate("Form", "View Party"))
         self.btnParty.setText(_translate("Form", "PARTY"))
 
+    def goToParty(self):
+        goToParty(self)
+
+    def goToVote(self):
+        goToVote(self)
 
 from resources import resource_rc
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = ContestantUI()
-    ui.setupUi(Form)
-    Form.show()
-    sys.exit(app.exec_())

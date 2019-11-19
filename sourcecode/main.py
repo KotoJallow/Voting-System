@@ -7,7 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from navigator import navigate
+from utils import goToWinner, goToAnnouncements, goToVote
 
 class MainUI(object):
     def setupUi(self, Form):
@@ -90,17 +90,11 @@ class MainUI(object):
         self.btnWinner.setText(_translate("Form", "Winner"))
 
     def goToWinner(self):
-        from winner import WinnerUI
-        self.destination = WinnerUI()
-        navigate(self)
+        goToWinner(self)
 
     def goToVote(self):
-        from vote import VoteUI
-        self.destination = VoteUI()
-        navigate(self)
+        goToVote(self)
 
     def goToAnnouncements(self):
-        from announcement import AnnouncementUI
-        self.destination = AnnouncementUI()
-        navigate(self)
+        goToAnnouncements(self)
 

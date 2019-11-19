@@ -7,7 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from navigator import navigate
+from utils import goToLogin
 
 class RegisterUI(object):
     def setupUi(self, MainForm):
@@ -228,7 +228,4 @@ class RegisterUI(object):
         self.lblPassword.setText(_translate("MainForm", "Password"))
 
     def goToLogin(self):
-        from login import LoginUI
-        self.destination = LoginUI()
-        navigate(self)
-        print("Login")
+        goToLogin(self)
