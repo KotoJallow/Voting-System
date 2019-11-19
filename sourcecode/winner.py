@@ -9,7 +9,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Form(object):
+class WinnerUI(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(631, 399)
@@ -142,7 +142,7 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     Form = QtWidgets.QWidget()
-    ui = Ui_Form()
+    ui = WinnerUI()
     ui.setupUi(Form)
     Form.show()
     sys.exit(app.exec_())

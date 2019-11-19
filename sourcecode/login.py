@@ -9,7 +9,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainForm(object):
+class LoginUI(object):
     def setupUi(self, MainForm):
         MainForm.setObjectName("MainForm")
         MainForm.resize(631, 399)
@@ -145,7 +145,7 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainForm = QtWidgets.QWidget()
-    ui = Ui_MainForm()
+    ui = LoginUI()
     ui.setupUi(MainForm)
     MainForm.show()
     sys.exit(app.exec_())
