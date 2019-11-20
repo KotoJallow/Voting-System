@@ -244,12 +244,12 @@ class VoteUI(object):
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
-        self.btnView0.clicked.connect(lambda: self.goToContestant(0))
-        self.btnView1.clicked.connect(lambda: self.goToContestant(1))
-        self.btnView2.clicked.connect(lambda: self.goToContestant(2))
-        self.btnView3.clicked.connect(lambda: self.goToContestant(3))
-        self.btnView4.clicked.connect(lambda: self.goToContestant(4))
-        self.btnView5.clicked.connect(lambda: self.goToContestant(5))
+        self.btnView0.clicked.connect(lambda: self.goToContestant(1))
+        self.btnView1.clicked.connect(lambda: self.goToContestant(2))
+        self.btnView2.clicked.connect(lambda: self.goToContestant(3))
+        self.btnView3.clicked.connect(lambda: self.goToContestant(4))
+        self.btnView4.clicked.connect(lambda: self.goToContestant(5))
+        self.btnView5.clicked.connect(lambda: self.goToContestant(6))
 
         self.btnVote0.clicked.connect(self.goToMain)
         self.btnVote1.clicked.connect(self.goToMain)
