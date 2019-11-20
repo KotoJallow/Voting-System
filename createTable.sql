@@ -45,3 +45,15 @@ CREATE TABLE IF NOT EXISTS "votes" (
 	"UserId"	INTEGER,
 	"ContestantId"	INTEGER
 );
+
+create view IF NOT EXISTS constestantView 
+as select c.Id, c.Name, c.Age, m.Type, p.Acronym from contestant as c
+join maritalStatus as m on c.MaritalStatusId = m.Id
+join party as p on c.PartyId = p.Id
+
+create view IF NOT EXISTS userView 
+as select u.Id,u.FirstName,u.LastName,g.Type from user as u
+join gender as g on u.GenderId = g.Id
+
+create view IF NOT EXISTS loginView
+as select Id, IdNumber as username, Password from user
