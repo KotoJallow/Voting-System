@@ -6,9 +6,9 @@ def goToLogin(source):
     navigate(source)
     print("Login")
 
-def goToMain(source):
+def goToMain(source,userId):
     from main import MainUI
-    source.destination = MainUI()
+    source.destination = MainUI(userId)
     navigate(source)
     print("Login")
 
@@ -24,9 +24,9 @@ def goToWinner(source):
     source.destination = WinnerUI()
     navigate(source)
 
-def goToVote(source):
+def goToVote(source,userId):
     from vote import VoteUI
-    source.destination = VoteUI()
+    source.destination = VoteUI(userId)
     navigate(source)
 
 def goToAnnouncements(source):

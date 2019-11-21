@@ -10,6 +10,10 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from utils import goToWinner, goToAnnouncements, goToVote
 
 class MainUI(object):
+
+    def __init__(self,userId):
+        self.userId = userId
+    
     def setupUi(self, Form):
         self.Form = Form
         Form.setObjectName("Form")

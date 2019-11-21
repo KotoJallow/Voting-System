@@ -11,6 +11,10 @@ from utils import goToContestant, goToMain
 
 
 class VoteUI(object):
+
+    def __init__(self,userId):
+        self.userId = userId
+
     def setupUi(self, Form):
         self.Form = Form
         Form.setObjectName("Form")
@@ -251,12 +255,12 @@ class VoteUI(object):
         self.btnView4.clicked.connect(lambda: self.goToContestant(5))
         self.btnView5.clicked.connect(lambda: self.goToContestant(6))
 
-        self.btnVote0.clicked.connect(self.goToMain)
-        self.btnVote1.clicked.connect(self.goToMain)
-        self.btnVote2.clicked.connect(self.goToMain)
-        self.btnVote3.clicked.connect(self.goToMain)
-        self.btnVote4.clicked.connect(self.goToMain)
-        self.btnVote5.clicked.connect(self.goToMain)
+        self.btnVote0.clicked.connect(lambda: self.goToMain(1))
+        self.btnVote1.clicked.connect(lambda: self.goToMain(2))
+        self.btnVote2.clicked.connect(lambda: self.goToMain(3))
+        self.btnVote3.clicked.connect(lambda: self.goToMain(4))
+        self.btnVote4.clicked.connect(lambda: self.goToMain(5))
+        self.btnVote5.clicked.connect(lambda: self.goToMain(6))
 
 
     def retranslateUi(self, Form):
@@ -296,6 +300,7 @@ class VoteUI(object):
     def goToContestant(self,index):
         goToContestant(self,index)
 
-    def goToMain(self):
+    def goToMain(self,contestantId):
+
         goToMain(self)
 
