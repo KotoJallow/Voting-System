@@ -11,7 +11,8 @@ from utils import goToVote,goToParty
 
 class ContestantUI(object):
 
-    def __init__(self,index):
+    def __init__(self,userId,index):
+        self.userId = userId
         self.index = index
 
     def setupUi(self, Form):
@@ -133,9 +134,9 @@ class ContestantUI(object):
         self.btnParty.setText(_translate("Form", "PARTY"))
 
     def goToParty(self,index):
-        goToParty(self,index)
+        goToParty(self,self.userId,index)
 
     def goToVote(self):
-        goToVote(self)
+        goToVote(self,self.userId)
 
 from resources import resource_rc

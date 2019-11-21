@@ -11,7 +11,8 @@ from utils import goToContestant
 
 class PartyUI(object):
 
-    def __init__(self,index):
+    def __init__(self,userId,index):
+        self.userId = userId
         self.index = index
 
     def setupUi(self, Form):
@@ -145,5 +146,5 @@ class PartyUI(object):
         self.btnClose.setText(_translate("Form", "CLOSE"))
 
     def goToContestant(self,index):
-        goToContestant(self,index)
+        goToContestant(self,self.userId,index)
 

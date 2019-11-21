@@ -11,6 +11,9 @@ from utils import goToLogin
 
 
 class WinnerUI(object):
+    def __init__(self,userId):
+        self.userId = userId
+
     def setupUi(self, Form):
         self.Form = Form
         Form.setObjectName("Form")

@@ -146,7 +146,7 @@ class LoginUI(object):
         self.btnTitle.setText(_translate("MainForm", "Electronic Voting System"))
 
     def goToMain(self):
-        goToMain(self)
+        goToMain(self,1)
 
     def goToRegister(self):
         goToRegister(self)

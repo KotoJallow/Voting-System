@@ -13,7 +13,7 @@ class MainUI(object):
 
     def __init__(self,userId):
         self.userId = userId
-    
+
     def setupUi(self, Form):
         self.Form = Form
         Form.setObjectName("Form")
@@ -94,11 +94,11 @@ class MainUI(object):
         self.btnWinner.setText(_translate("Form", "Winner"))
 
     def goToWinner(self):
-        goToWinner(self)
+        goToWinner(self,self.userId)
 
     def goToVote(self):
-        goToVote(self)
+        goToVote(self,self.userId)
 
     def goToAnnouncements(self):
-        goToAnnouncements(self)
+        goToAnnouncements(self,self.userId)
 

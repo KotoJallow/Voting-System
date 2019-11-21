@@ -10,6 +10,10 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from utils import goToMain
 
 class AnnouncementUI(object):
+
+    def __init__(self,userId):
+        self.userId = userId
+
     def setupUi(self, Form):
         self.Form = Form
         Form.setObjectName("Form")
@@ -228,7 +232,6 @@ class AnnouncementUI(object):
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
-
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Announcement"))
@@ -246,6 +249,6 @@ class AnnouncementUI(object):
         self.lblPercentage5.setText(_translate("Form", "70%"))
 
     def goToMain(self):
-        goToMain(self)
+        goToMain(self,self.userId)
 
 from resources import resource_rc

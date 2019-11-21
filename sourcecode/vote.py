@@ -262,7 +262,6 @@ class VoteUI(object):
         self.btnVote4.clicked.connect(lambda: self.goToMain(5))
         self.btnVote5.clicked.connect(lambda: self.goToMain(6))
 
-
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Vote"))
@@ -297,10 +296,10 @@ class VoteUI(object):
         self.btnView5.setToolTip(_translate("Form", "Vote Candidate"))
         self.btnView5.setText(_translate("Form", "View"))
 
-    def goToContestant(self,index):
-        goToContestant(self,index)
+    def goToContestant(self, index):
+        goToContestant(self, self.userId, index)
 
     def goToMain(self,contestantId):
-
-        goToMain(self)
+        # contestant Id to set a vote
+        goToMain(self,self.userId)
 
