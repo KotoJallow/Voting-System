@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS "votes" (
 	"ContestantId"	INTEGER
 );
 
-create view IF NOT EXISTS constestantView 
+create view IF NOT EXISTS contestantView 
 as select c.Id, c.Name, c.Age, m.Type, p.Acronym from contestant as c
 join maritalStatus as m on c.MaritalStatusId = m.Id
 join party as p on c.PartyId = p.Id
