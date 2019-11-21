@@ -8,12 +8,14 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from utils import goToVote,goToParty
+import BusinessLogic,DataAccess,Dialog
 
 class ContestantUI(object):
 
-    def __init__(self,userId,index):
+    def __init__(self,userId,index,ui_data):
         self.userId = userId
         self.index = index
+        self.ui_data = ui_data
 
     def setupUi(self, Form):
         self.Form = Form
@@ -112,6 +114,13 @@ class ContestantUI(object):
         self.gridLayout.addWidget(self.frame, 0, 0, 1, 1)
 
         self.retranslateUi(Form)
+
+        # Get data from database
+        self.lblName.setText(self.ui_data.get('Name'))
+        self.lblAge.setText(str(self.ui_data.get('Age')))
+        self.lblMaritalStatus.setText(self.ui_data.get('Type'))
+        self.lblName.setText(self.ui_data.get('Acronym'))
+
         QtCore.QMetaObject.connectSlotsByName(Form)
 
         self.btnClose.clicked.connect(self.goToVote)
@@ -134,9 +143,18 @@ class ContestantUI(object):
         self.btnParty.setText(_translate("Form", "PARTY"))
 
     def goToParty(self,index):
-        goToParty(self,self.userId,index)
+        result = DataAccess.getParty(index)
+        if result:
+            goToParty(self, self.userId, index,result)
+        else:
+            Dialog.error_message(self.Form, 'Data access error. Try again')
+
 
     def goToVote(self):
-        goToVote(self,self.userId)
+        result = BusinessLogic.getNamePartyPercentage()
+        if result:
+            goToVote(self, self.userId, result)
+        else:
+            Dialog.error_message(self.Form, 'Data access error. Try again')
 
 from resources import resource_rc

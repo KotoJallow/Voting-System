@@ -24,24 +24,24 @@ def goToWinner(source,userId,name,party,percentage):
     source.destination = WinnerUI(userId,name,party,percentage)
     navigate(source)
 
-def goToVote(source,userId):
+def goToVote(source,userId,ui_data):
     from vote import VoteUI
-    source.destination = VoteUI(userId)
+    source.destination = VoteUI(userId,ui_data)
     navigate(source)
 
-def goToAnnouncements(source,userId):
+def goToAnnouncements(source,userId,ui_data):
     from announcement import AnnouncementUI
-    source.destination = AnnouncementUI(userId)
+    source.destination = AnnouncementUI(userId,ui_data)
     navigate(source)
 
-def goToContestant(source,userId,index):
+def goToContestant(source,userId,index,ui_data):
     from contestant import ContestantUI
-    source.destination = ContestantUI(userId,index)
+    source.destination = ContestantUI(userId,index,ui_data)
     navigate(source)
     print("Clicked index: %d" % index)
 
-def goToParty(source,userId,index):
+def goToParty(source,userId,index,ui_data):
     from party import PartyUI
-    source.destination = PartyUI(userId,index)
+    source.destination = PartyUI(userId,index,ui_data)
     navigate(source)
     print("Clicked index: %d" % index)

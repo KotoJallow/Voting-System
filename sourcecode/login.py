@@ -158,9 +158,6 @@ class LoginUI(object):
     def goToRegister(self):
         goToRegister(self)
 
-    def reload(self):
-        pass
-
 if __name__ == "__main__":
     import sys
 

@@ -106,8 +106,16 @@ class MainUI(object):
             Dialog.error_message(self.Form,'Data access error. Try again')
 
     def goToVote(self):
-        goToVote(self,self.userId)
+        result = BusinessLogic.getNamePartyPercentage()
+        if result:
+            goToVote(self, self.userId, result)
+        else:
+            Dialog.error_message(self.Form, 'Data access error. Try again')
 
     def goToAnnouncements(self):
-        goToAnnouncements(self,self.userId)
+        result = BusinessLogic.getNamePartyPercentage()
+        if result:
+            goToAnnouncements(self, self.userId,result)
+        else:
+            Dialog.error_message(self.Form, 'Data access error. Try again')
 

@@ -11,8 +11,9 @@ from utils import goToMain
 
 class AnnouncementUI(object):
 
-    def __init__(self,userId):
+    def __init__(self,userId, ui_data):
         self.userId = userId
+        self.ui_data = ui_data
 
     def setupUi(self, Form):
         self.Form = Form
@@ -230,6 +231,21 @@ class AnnouncementUI(object):
         self.gridLayout.addWidget(self.frame, 0, 0, 1, 1)
 
         self.retranslateUi(Form)
+
+        # Get data from database
+        self.lblName0.setText(self.ui_data[0].get('Name'))
+        self.lblPercentage0.setText(self.ui_data[0].get('Percentage'))
+        self.lblName1.setText(self.ui_data[1].get('Name'))
+        self.lblPercentage1.setText(self.ui_data[1].get('Percentage'))
+        self.lblName2.setText(self.ui_data[2].get('Name'))
+        self.lblPercentage2.setText(self.ui_data[2].get('Percentage'))
+        self.lblName3.setText(self.ui_data[3].get('Name'))
+        self.lblPercentage3.setText(self.ui_data[3].get('Percentage'))
+        self.lblName4.setText(self.ui_data[4].get('Name'))
+        self.lblPercentage4.setText(self.ui_data[4].get('Percentage'))
+        self.lblName5.setText(self.ui_data[5].get('Name'))
+        self.lblPercentage5.setText(self.ui_data[5].get('Percentage'))
+
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):

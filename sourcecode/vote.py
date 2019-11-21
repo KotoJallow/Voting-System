@@ -8,12 +8,13 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from utils import goToContestant, goToMain
-
+import DataAccess, Dialog
 
 class VoteUI(object):
 
-    def __init__(self,userId):
+    def __init__(self,userId,ui_data):
         self.userId = userId
+        self.ui_data = ui_data
 
     def setupUi(self, Form):
         self.Form = Form
@@ -30,10 +31,10 @@ class VoteUI(object):
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
-        self.btnResult_2 = QtWidgets.QPushButton(self.frame)
-        self.btnResult_2.setGeometry(QtCore.QRect(30, 10, 179, 179))
-        self.btnResult_2.setMinimumSize(QtCore.QSize(179, 179))
-        self.btnResult_2.setStyleSheet("font: 14pt \"Myanmar Text\";\n"
+        self.btnName0 = QtWidgets.QPushButton(self.frame)
+        self.btnName0.setGeometry(QtCore.QRect(30, 10, 179, 179))
+        self.btnName0.setMinimumSize(QtCore.QSize(179, 179))
+        self.btnName0.setStyleSheet("font: 14pt \"Myanmar Text\";\n"
 "background-color:#377896;\n"
 "color:  white;\n"
 " border-style: solid;\n"
@@ -44,11 +45,11 @@ class VoteUI(object):
 " max-height:175px;\n"
 " min-width:175px;\n"
 " min-height:175px;")
-        self.btnResult_2.setObjectName("btnResult_2")
-        self.btnResult_3 = QtWidgets.QPushButton(self.frame)
-        self.btnResult_3.setGeometry(QtCore.QRect(30, 190, 179, 179))
-        self.btnResult_3.setMinimumSize(QtCore.QSize(179, 179))
-        self.btnResult_3.setStyleSheet("font: 14pt \"Myanmar Text\";\n"
+        self.btnName0.setObjectName("btnName0")
+        self.btnName3 = QtWidgets.QPushButton(self.frame)
+        self.btnName3.setGeometry(QtCore.QRect(30, 190, 179, 179))
+        self.btnName3.setMinimumSize(QtCore.QSize(179, 179))
+        self.btnName3.setStyleSheet("font: 14pt \"Myanmar Text\";\n"
 "background-color:#377896;\n"
 "color:  white;\n"
 " border-style: solid;\n"
@@ -59,11 +60,11 @@ class VoteUI(object):
 " max-height:175px;\n"
 " min-width:175px;\n"
 " min-height:175px;")
-        self.btnResult_3.setObjectName("btnResult_3")
-        self.btnResult_4 = QtWidgets.QPushButton(self.frame)
-        self.btnResult_4.setGeometry(QtCore.QRect(220, 10, 179, 179))
-        self.btnResult_4.setMinimumSize(QtCore.QSize(179, 179))
-        self.btnResult_4.setStyleSheet("font: 14pt \"Myanmar Text\";\n"
+        self.btnName3.setObjectName("btnName3")
+        self.btnName1 = QtWidgets.QPushButton(self.frame)
+        self.btnName1.setGeometry(QtCore.QRect(220, 10, 179, 179))
+        self.btnName1.setMinimumSize(QtCore.QSize(179, 179))
+        self.btnName1.setStyleSheet("font: 14pt \"Myanmar Text\";\n"
 "background-color:#377896;\n"
 "color:  white;\n"
 " border-style: solid;\n"
@@ -74,11 +75,11 @@ class VoteUI(object):
 " max-height:175px;\n"
 " min-width:175px;\n"
 " min-height:175px;")
-        self.btnResult_4.setObjectName("btnResult_4")
-        self.btnResult_5 = QtWidgets.QPushButton(self.frame)
-        self.btnResult_5.setGeometry(QtCore.QRect(410, 10, 179, 179))
-        self.btnResult_5.setMinimumSize(QtCore.QSize(179, 179))
-        self.btnResult_5.setStyleSheet("font: 14pt \"Myanmar Text\";\n"
+        self.btnName1.setObjectName("btnName1")
+        self.btnName2 = QtWidgets.QPushButton(self.frame)
+        self.btnName2.setGeometry(QtCore.QRect(410, 10, 179, 179))
+        self.btnName2.setMinimumSize(QtCore.QSize(179, 179))
+        self.btnName2.setStyleSheet("font: 14pt \"Myanmar Text\";\n"
 "background-color:#377896;\n"
 "color:  white;\n"
 " border-style: solid;\n"
@@ -89,11 +90,11 @@ class VoteUI(object):
 " max-height:175px;\n"
 " min-width:175px;\n"
 " min-height:175px;")
-        self.btnResult_5.setObjectName("btnResult_5")
-        self.btnResult_6 = QtWidgets.QPushButton(self.frame)
-        self.btnResult_6.setGeometry(QtCore.QRect(220, 190, 179, 179))
-        self.btnResult_6.setMinimumSize(QtCore.QSize(179, 179))
-        self.btnResult_6.setStyleSheet("font: 14pt \"Myanmar Text\";\n"
+        self.btnName2.setObjectName("btnName2")
+        self.btnName4 = QtWidgets.QPushButton(self.frame)
+        self.btnName4.setGeometry(QtCore.QRect(220, 190, 179, 179))
+        self.btnName4.setMinimumSize(QtCore.QSize(179, 179))
+        self.btnName4.setStyleSheet("font: 14pt \"Myanmar Text\";\n"
 "background-color:#377896;\n"
 "color:  white;\n"
 " border-style: solid;\n"
@@ -104,11 +105,11 @@ class VoteUI(object):
 " max-height:175px;\n"
 " min-width:175px;\n"
 " min-height:175px;")
-        self.btnResult_6.setObjectName("btnResult_6")
-        self.btnResult_7 = QtWidgets.QPushButton(self.frame)
-        self.btnResult_7.setGeometry(QtCore.QRect(420, 190, 179, 179))
-        self.btnResult_7.setMinimumSize(QtCore.QSize(179, 179))
-        self.btnResult_7.setStyleSheet("font: 14pt \"Myanmar Text\";\n"
+        self.btnName4.setObjectName("btnName4")
+        self.btnName5 = QtWidgets.QPushButton(self.frame)
+        self.btnName5.setGeometry(QtCore.QRect(420, 190, 179, 179))
+        self.btnName5.setMinimumSize(QtCore.QSize(179, 179))
+        self.btnName5.setStyleSheet("font: 14pt \"Myanmar Text\";\n"
 "background-color:#377896;\n"
 "color:  white;\n"
 " border-style: solid;\n"
@@ -119,7 +120,7 @@ class VoteUI(object):
 " max-height:175px;\n"
 " min-width:175px;\n"
 " min-height:175px;")
-        self.btnResult_7.setObjectName("btnResult_7")
+        self.btnName5.setObjectName("btnName5")
         self.btnVote0 = QtWidgets.QPushButton(self.frame)
         self.btnVote0.setGeometry(QtCore.QRect(70, 130, 111, 41))
         self.btnVote0.setStyleSheet("background-color:#b5e7ff;\n"
@@ -246,6 +247,21 @@ class VoteUI(object):
         self.gridLayout.addWidget(self.frame, 0, 0, 1, 1)
 
         self.retranslateUi(Form)
+
+        # Get data from database
+        self.btnName0.setText(self.ui_data[0].get('Name'))
+        self.btnVote0.setText(self.ui_data[0].get('Party'))
+        self.btnName1.setText(self.ui_data[1].get('Name'))
+        self.btnVote1.setText(self.ui_data[1].get('Party'))
+        self.btnName2.setText(self.ui_data[2].get('Name'))
+        self.btnVote2.setText(self.ui_data[2].get('Party'))
+        self.btnName3.setText(self.ui_data[3].get('Name'))
+        self.btnVote3.setText(self.ui_data[3].get('Party'))
+        self.btnName4.setText(self.ui_data[4].get('Name'))
+        self.btnVote4.setText(self.ui_data[4].get('Party'))
+        self.btnName5.setText(self.ui_data[5].get('Name'))
+        self.btnVote5.setText(self.ui_data[5].get('Party'))
+
         QtCore.QMetaObject.connectSlotsByName(Form)
 
         self.btnView0.clicked.connect(lambda: self.goToContestant(1))
@@ -265,12 +281,12 @@ class VoteUI(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Vote"))
-        self.btnResult_2.setText(_translate("Form", "Mr X"))
-        self.btnResult_3.setText(_translate("Form", "Mr S"))
-        self.btnResult_4.setText(_translate("Form", "Mr Y"))
-        self.btnResult_5.setText(_translate("Form", "Mr Z"))
-        self.btnResult_6.setText(_translate("Form", "MR T"))
-        self.btnResult_7.setText(_translate("Form", "MR U"))
+        self.btnName0.setText(_translate("Form", "Mr X"))
+        self.btnName3.setText(_translate("Form", "Mr S"))
+        self.btnName1.setText(_translate("Form", "Mr Y"))
+        self.btnName2.setText(_translate("Form", "Mr Z"))
+        self.btnName4.setText(_translate("Form", "MR T"))
+        self.btnName5.setText(_translate("Form", "MR U"))
         self.btnVote0.setToolTip(_translate("Form", "Vote Candidate"))
         self.btnVote0.setText(_translate("Form", "ABP"))
         self.btnVote1.setToolTip(_translate("Form", "Vote Candidate"))
@@ -297,7 +313,12 @@ class VoteUI(object):
         self.btnView5.setText(_translate("Form", "View"))
 
     def goToContestant(self, index):
-        goToContestant(self, self.userId, index)
+        result = DataAccess.getContestant(index)
+        if result:
+            goToContestant(self, self.userId, index,result)
+        else:
+            Dialog.error_message(self.Form, 'Data access error. Try again')
+
 
     def goToMain(self,contestantId):
         # contestant Id to set a vote

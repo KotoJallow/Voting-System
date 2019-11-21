@@ -8,12 +8,14 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from utils import goToContestant
+import DataAccess, Dialog
 
 class PartyUI(object):
 
-    def __init__(self,userId,index):
+    def __init__(self,userId,index,ui_data):
         self.userId = userId
         self.index = index
+        self.ui_data = ui_data
 
     def setupUi(self, Form):
         self.Form = Form
@@ -40,13 +42,13 @@ class PartyUI(object):
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
-        self.label = QtWidgets.QLabel(self.frame_2)
-        self.label.setGeometry(QtCore.QRect(20, 10, 201, 31))
-        self.label.setStyleSheet("")
-        self.label.setObjectName("label")
-        self.label_2 = QtWidgets.QLabel(self.frame_2)
-        self.label_2.setGeometry(QtCore.QRect(20, 40, 491, 31))
-        self.label_2.setObjectName("label_2")
+        self.lblAcronym = QtWidgets.QLabel(self.frame_2)
+        self.lblAcronym.setGeometry(QtCore.QRect(20, 10, 201, 31))
+        self.lblAcronym.setStyleSheet("")
+        self.lblAcronym.setObjectName("label")
+        self.lblName = QtWidgets.QLabel(self.frame_2)
+        self.lblName.setGeometry(QtCore.QRect(20, 40, 491, 31))
+        self.lblName.setObjectName("lblName")
         self.frame_3 = QtWidgets.QFrame(self.frame)
         self.frame_3.setGeometry(QtCore.QRect(30, 110, 551, 191))
         self.frame_3.setMinimumSize(QtCore.QSize(551, 191))
@@ -123,6 +125,16 @@ class PartyUI(object):
         self.gridLayout.addWidget(self.frame, 0, 0, 1, 1)
 
         self.retranslateUi(Form)
+
+        # Get data from database
+        self.lblAcronym.setText(self.ui_data.get('Acronym'))
+        self.lblName.setText(self.ui_data.get('Name'))
+        self.lblLeader.setText(self.ui_data.get('Leader'))
+        self.lblYearEstablished.setText(str(self.ui_data.get('YearEstablished')))
+        self.lblMotto.setText(self.ui_data.get('Motto'))
+        self.lblAddress.setText(self.ui_data.get('Address'))
+        self.lblPhoneNumber.setText(self.ui_data.get('PhoneNumber'))
+
         QtCore.QMetaObject.connectSlotsByName(Form)
 
         self.btnClose.clicked.connect(lambda : self.goToContestant(self.index))
@@ -130,8 +142,8 @@ class PartyUI(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Party"))
-        self.label.setText(_translate("Form", "ABP"))
-        self.label_2.setText(_translate("Form", "Action Business Party"))
+        self.lblAcronym.setText(_translate("Form", "ABP"))
+        self.lblName.setText(_translate("Form", "Action Business Party"))
         self.label_3.setText(_translate("Form", "LEADER"))
         self.label_4.setText(_translate("Form", "YEAR ESTABLISHED"))
         self.label_5.setText(_translate("Form", "MOTTO"))
@@ -146,5 +158,9 @@ class PartyUI(object):
         self.btnClose.setText(_translate("Form", "CLOSE"))
 
     def goToContestant(self,index):
-        goToContestant(self,self.userId,index)
+        result = DataAccess.getContestant(index)
+        if result:
+            goToContestant(self, self.userId, index, result)
+        else:
+            Dialog.error_message(self.Form, 'Data access error. Try again')
 

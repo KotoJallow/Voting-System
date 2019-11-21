@@ -12,9 +12,6 @@ def getLogin(username,password):
         return result[0]['Id']
     return False
 
-print(getLogin('1234','1234'))
-
-
 def getContestant(id):
     query = DBQueries.getContestant % id
     result = database.execute(query).fetchone()
@@ -42,7 +39,7 @@ def getParty(id):
     if result:
         return dict(result)
     return False
-
+print(getParty(1))
 def getUser(id):
     query = DBQueries.getUser % id
     result = database.execute(query).fetchone()
