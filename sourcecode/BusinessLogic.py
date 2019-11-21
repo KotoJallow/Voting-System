@@ -27,3 +27,4 @@ def winnerUI():
     id = winner.get('ContestantId')
     winnerNamePartyPercentage = getNamePartyPercentage()[id]
     return winnerNamePartyPercentage
+print(winnerUI())

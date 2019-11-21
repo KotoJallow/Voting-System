@@ -7,6 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import DataAccess, Dialog
 from utils import goToLogin
 
 class RegisterUI(object):
@@ -228,4 +229,24 @@ class RegisterUI(object):
         self.lblPassword.setText(_translate("MainForm", "Password"))
 
     def goToLogin(self):
-        goToLogin(self)
+        firstname = self.lineEditFirstName.text().strip()
+        middlename = self.lineEditMiddleName.text().strip()
+        lastname = self.lineEditLastName.text().strip()
+        idnumber = self.lineEditIdNumber.text().strip()
+        gender = self.cbGender.currentIndex()
+        password = self.lineEditPassword.text().strip()
+
+        validGender = 1<=gender<=2
+        validInput = firstname and lastname and idnumber and password and validGender
+
+        if validInput:
+            result = DataAccess.insertUser(firstname,middlename,lastname,idnumber,gender,password)
+            if result:
+                Dialog.information_message(self.Form,'Registration successful')
+                goToLogin(self)
+            else:
+                Dialog.error_message(self.Form,'Data insertion error. Try again')
+        else:
+            Dialog.warning_message(self.Form,"A valid gender is required and All fields requires save middle name.")
+
+

@@ -8,7 +8,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from utils import goToMain, goToRegister
-
+import DataAccess, Dialog
 
 class LoginUI(object):
     def setupUi(self, MainForm):
@@ -146,11 +146,20 @@ class LoginUI(object):
         self.btnTitle.setText(_translate("MainForm", "Electronic Voting System"))
 
     def goToMain(self):
-        goToMain(self,1)
+        username = self.lineEditUserName.text()
+        password = self.lineEditPassword.text()
+
+        result = DataAccess.getLogin(username,password)
+        if result:
+            goToMain(self,result)
+        else:
+            Dialog.error_message(self.Form,"Please check login details")
 
     def goToRegister(self):
         goToRegister(self)
 
+    def reload(self):
+        pass
 
 if __name__ == "__main__":
     import sys

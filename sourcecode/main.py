@@ -8,11 +8,13 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from utils import goToWinner, goToAnnouncements, goToVote
+import BusinessLogic, Dialog
 
 class MainUI(object):
 
     def __init__(self,userId):
         self.userId = userId
+        print("UserId is: ", userId)
 
     def setupUi(self, Form):
         self.Form = Form
@@ -94,7 +96,14 @@ class MainUI(object):
         self.btnWinner.setText(_translate("Form", "Winner"))
 
     def goToWinner(self):
-        goToWinner(self,self.userId)
+        result = BusinessLogic.winnerUI()
+        if result:
+            name = result.get('Name')
+            party = result.get('Party')
+            percentage = result.get('Percentage')
+            goToWinner(self, self.userId,name,party,percentage)
+        else:
+            Dialog.error_message(self.Form,'Data access error. Try again')
 
     def goToVote(self):
         goToVote(self,self.userId)

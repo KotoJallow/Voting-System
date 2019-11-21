@@ -19,9 +19,9 @@ def goToRegister(source):
     print("Register")
 
 
-def goToWinner(source,userId):
+def goToWinner(source,userId,name,party,percentage):
     from winner import WinnerUI
-    source.destination = WinnerUI(userId)
+    source.destination = WinnerUI(userId,name,party,percentage)
     navigate(source)
 
 def goToVote(source,userId):

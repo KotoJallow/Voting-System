@@ -9,10 +9,14 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from utils import goToLogin
 
-
 class WinnerUI(object):
-    def __init__(self,userId):
+    def __init__(self,userId,winnerName,winnerParty,winnerPercentage):
         self.userId = userId
+        self.winnerName = winnerName
+        self.winnerParty = winnerParty
+        self.winnerPercentage = winnerPercentage
+
+        print(winnerName,winnerParty,winnerPercentage)
 
     def setupUi(self, Form):
         self.Form = Form
@@ -126,7 +130,15 @@ class WinnerUI(object):
         self.horizontalLayout.addWidget(self.frame_3)
         self.gridLayout.addWidget(self.frame, 0, 0, 1, 1)
 
+
+
         self.retranslateUi(Form)
+
+        # Get data from database
+        self.lblName.setText(self.winnerName)
+        self.lblParty.setText(self.winnerParty)
+        self.lblPercentage.setText(self.winnerPercentage)
+
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
