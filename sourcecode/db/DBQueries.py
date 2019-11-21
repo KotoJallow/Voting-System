@@ -1,5 +1,6 @@
 
 getContestant = "select * from contestantView where Id = %d"
+getNamesOfAllContestants = "select Name from contestant"
 getParty = "select * from party where Id = %d"
 getUser = "select * from userView where Id = %d"
 getLogin = "select Id from loginView where Username = ? and Password = ?"

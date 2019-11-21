@@ -19,6 +19,13 @@ def getContestant(id):
         return dict(result)
     return None
 
+def getNamesOfAllContestants():
+    result = database.execute(DBQueries.getNamesOfAllContestants).fetchall()
+    names = []
+    for name in result:
+        names.append(name[0])
+    return names
+
 def getParty(id):
     query = DBQueries.getParty % id
     result = database.execute(query).fetchone()
