@@ -10,14 +10,14 @@ def getLogin(username,password):
     result = database.execute(DBQueries.getLogin,(username,password)).fetchall()
     if(len(result) == 1):
         return result[0]['Id']
-    return None
+    return False
 
 def getContestant(id):
     query = DBQueries.getContestant % id
     result = database.execute(query).fetchone()
     if result:
         return dict(result)
-    return None
+    return False
 
 def getNamesOfAllContestants():
     result = database.execute(DBQueries.getNamesOfAllContestants).fetchall()
@@ -38,35 +38,35 @@ def getParty(id):
     result = database.execute(query).fetchone()
     if result:
         return dict(result)
-    return None
+    return False
 
 def getUser(id):
     query = DBQueries.getUser % id
     result = database.execute(query).fetchone()
     if result:
         return dict(result)
-    return None
+    return False
 
 def getVotes(id):
     query = DBQueries.getVotes % id
     result = database.execute(query).fetchone()
     if result:
         return dict(result)
-    return None
+    return False
 
 def getTotalVotes():
     query = DBQueries.getTotalVotes
     result = database.execute(query).fetchone()
     if result:
         return dict(result)
-    return None
+    return False
 
 def getWinner():
     query = DBQueries.getWinner
     result = database.execute(query).fetchone()
     if result:
         return dict(result)
-    return None
+    return False
 
 def insertUser(firstname,middlename,lastname,idnumber,gender,password):
     try:
