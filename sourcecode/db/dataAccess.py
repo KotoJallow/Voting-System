@@ -26,6 +26,13 @@ def getNamesOfAllContestants():
         names.append(name[0])
     return names
 
+def getContestantNameParty():
+    result = database.execute(DBQueries.getContestantNameParty).fetchall()
+    namesParty = []
+    for nameParty in result:
+        namesParty.append(dict(nameParty))
+    return namesParty
+
 def getParty(id):
     query = DBQueries.getParty % id
     result = database.execute(query).fetchone()
@@ -78,4 +85,4 @@ def insertVote(user,contestant):
     except:
         return False
 
-database.close()
+#connection.close()

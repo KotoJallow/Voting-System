@@ -57,3 +57,6 @@ join gender as g on u.GenderId = g.Id
 
 create view IF NOT EXISTS loginView
 as select Id, IdNumber as Username, Password from user
+
+create view IF NOT EXISTS contestantNameParty
+as select Name, Acronym as Party from contestantView
