@@ -25,5 +25,6 @@ def getNamePartyPercentage():
 def winnerUI():
     winner = DataAccess.getWinner()
     id = winner.get('ContestantId')
-    winnerNamePartyPercentage = getNamePartyPercentage()[id]
+    index = id - 1
+    winnerNamePartyPercentage = getNamePartyPercentage()[index]
     return winnerNamePartyPercentage
