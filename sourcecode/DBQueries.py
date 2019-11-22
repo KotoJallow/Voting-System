@@ -5,6 +5,7 @@ getContestantNameParty = "select * from contestantNameParty"
 getParty = "select * from party where Id = %d"
 getUser = "select * from userView where Id = %d"
 getLogin = "select Id from loginView where Username = ? and Password = ?"
+getUserVoteStatus = "select * from votes where UserId = %d"
 getVotes = "select count(*) as VotesCount from votes where ContestantId = %d"
 getTotalVotes = "select count(*) as TotalVotes from votes"
 getWinner = '''SELECT ContestantId,COUNT(ContestantId) AS VotesCount FROM votes 

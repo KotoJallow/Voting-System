@@ -47,6 +47,13 @@ def getUser(id):
         return dict(result)
     return False
 
+def getUserVoteStatus(id):
+    query = DBQueries.getUserVoteStatus % id
+    result = database.execute(query).fetchone()
+    if result:
+        return dict(result)
+    return False
+
 def getVotes(id):
     query = DBQueries.getVotes % id
     result = database.execute(query).fetchone()

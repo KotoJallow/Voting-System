@@ -322,5 +322,11 @@ class VoteUI(object):
 
     def goToMain(self,contestantId):
         # contestant Id to set a vote
-        goToMain(self,self.userId)
+        result = DataAccess.insertVote(self.userId,contestantId)
+        if result:
+            Dialog.information_message(self.Form, 'Vote Successful Registered')
+            goToMain(self, self.userId)
+        else:
+            Dialog.error_message(self.Form, 'Data access error. Try again')
+
 
