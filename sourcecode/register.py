@@ -245,7 +245,7 @@ class RegisterUI(object):
                 Dialog.information_message(self.Form,'Registration successful')
                 goToLogin(self)
             else:
-                Dialog.error_message(self.Form,'Data insertion error. Try again')
+                Dialog.error_message(self.Form,'Data insertion error. Try again\nId numbers should be unique')
         else:
             Dialog.warning_message(self.Form,"A valid gender is required and All fields requires save middle name.")
 
