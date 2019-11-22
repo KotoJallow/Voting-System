@@ -111,6 +111,11 @@ class MainUI(object):
             Dialog.error_message(self.Form,'Data access error. Try again')
 
     def goToVote(self):
+        userVoted = DataAccess.getUserVoteStatus(self.userId)
+        if userVoted:
+            Dialog.information_message(self.Form, 'You have already voted')
+            return
+
         result = BusinessLogic.getNamePartyPercentage()
         if result:
             goToVote(self, self.userId, result)
