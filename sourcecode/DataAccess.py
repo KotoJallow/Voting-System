@@ -39,9 +39,16 @@ def getParty(id):
     if result:
         return dict(result)
     return False
-print(getParty(1))
+
 def getUser(id):
     query = DBQueries.getUser % id
+    result = database.execute(query).fetchone()
+    if result:
+        return dict(result)
+    return False
+
+def getUserVoteStatus(id):
+    query = DBQueries.getUserVoteStatus % id
     result = database.execute(query).fetchone()
     if result:
         return dict(result)

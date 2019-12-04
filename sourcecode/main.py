@@ -8,7 +8,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from utils import goToWinner, goToAnnouncements, goToVote
-import BusinessLogic, Dialog
+import DataAccess,BusinessLogic, Dialog
 
 class MainUI(object):
 
@@ -96,6 +96,11 @@ class MainUI(object):
         self.btnWinner.setText(_translate("Form", "Winner"))
 
     def goToWinner(self):
+        userVoted = DataAccess.getUserVoteStatus(self.userId)
+        if not userVoted:
+            Dialog.information_message(self.Form, 'You have to vote first to view it')
+            return
+
         result = BusinessLogic.winnerUI()
         if result:
             name = result.get('Name')
@@ -106,6 +111,11 @@ class MainUI(object):
             Dialog.error_message(self.Form,'Data access error. Try again')
 
     def goToVote(self):
+        userVoted = DataAccess.getUserVoteStatus(self.userId)
+        if userVoted:
+            Dialog.information_message(self.Form, 'You have already voted')
+            return
+
         result = BusinessLogic.getNamePartyPercentage()
         if result:
             goToVote(self, self.userId, result)
@@ -113,6 +123,11 @@ class MainUI(object):
             Dialog.error_message(self.Form, 'Data access error. Try again')
 
     def goToAnnouncements(self):
+        userVoted = DataAccess.getUserVoteStatus(self.userId)
+        if not userVoted:
+            Dialog.information_message(self.Form, 'You have to vote first to view it')
+            return
+
         result = BusinessLogic.getNamePartyPercentage()
         if result:
             goToAnnouncements(self, self.userId,result)
