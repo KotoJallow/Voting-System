@@ -26,7 +26,7 @@
    <string>E-Voting System</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(170, 170, 255);</string>
+   <string notr="true">background-color: #2898cc;</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <property name="sizeConstraint">
@@ -44,7 +44,7 @@
       <enum>Qt::StrongFocus</enum>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(55, 100, 205);</string>
+      <string notr="true">background-color: #b5e7ff;</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -63,10 +63,10 @@
         </property>
         <property name="styleSheet">
          <string notr="true">border-style: outset;
-background-color: rgb(38,38,38);
+background-color:#377896;
 border-width: 2px;
 border-radius: 15px;
-border-color: black;
+border-color: #b9daea;
 padding: 4px;</string>
         </property>
         <property name="frameShape">
@@ -89,7 +89,7 @@ padding: 4px;</string>
 border-style: outset;
 border-width: 2px;
 border-radius: 15px;
-border-color: black;
+border-color: #b9daea;
 padding: 4px;
 </string>
          </property>
@@ -110,15 +110,14 @@ padding: 4px;
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: orange;
-border-style: outset;
+          <string notr="true">border-style: outset;
 border-width: 2px;
 border-radius: 15px;
-border-color: black;
-padding: 4px;</string>
+padding: 4px;
+background-color: #fff;</string>
          </property>
          <property name="placeholderText">
-          <string>Enter username</string>
+          <string>Enter your voters id number</string>
          </property>
         </widget>
         <widget class="QLineEdit" name="lineEditPassword">
@@ -131,11 +130,11 @@ padding: 4px;</string>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: orange;
+          <string notr="true">background-color: #fff;
 border-style: outset;
 border-width: 2px;
 border-radius: 15px;
-border-color: black;
+border-color: #b9daea;
 padding: 4px;</string>
          </property>
          <property name="text">
@@ -162,7 +161,7 @@ padding: 4px;</string>
 border-style: outset;
 border-width: 2px;
 border-radius: 15px;
-border-color: black;
+border-color: #b9daea;
 padding: 4px;
 text-align: center;</string>
          </property>
@@ -183,8 +182,7 @@ text-align: center;</string>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(202, 78, 34);
-color: white;</string>
+          <string notr="true">background-color:#b5e7ff;</string>
          </property>
          <property name="text">
           <string>Log In</string>
@@ -200,12 +198,10 @@ color: white;</string>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(202, 78, 34);
-color: white;
+          <string notr="true">background-color:#b5e7ff;
 border-style: outset;
 border-width: 2px;
 border-radius: 15px;
-border-color: black;
 padding: 4px;
 text-align: center;</string>
          </property>
@@ -242,13 +238,13 @@ text-align: center;</string>
             <enum>Qt::StrongFocus</enum>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: #262626;
+            <string notr="true">background-color:#377896;
+border-color: #b9daea;
 font: 16pt &quot;MS Shell Dlg 2&quot;;
 color: white;
 border-style: outset;
 border-width: 2px;
 border-radius: 15px;
-border-color: black;
 padding: 4px;
 text-align: center;</string>
            </property>
